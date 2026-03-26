@@ -5,3 +5,5 @@
 ## Dependencies
 
 - Hyprland, Hyprlock, Hyprlidle
+
+- eza
