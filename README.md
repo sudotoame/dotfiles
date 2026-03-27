@@ -1,9 +1,11 @@
 # Dotfiles
 
-- my dotfiles for stow
+- dotfiles for stow
 
 ## Dependencies
 
 - Hyprland, Hyprlock, Hyprlidle
 
 - eza
+
+- swwww
