@@ -46,7 +46,7 @@
     // ═══════════════════════════════════════════════════════════
     
     "custom/launcher": {
-        "format": "󰣇",
+        "format": "",
         "on-click": "wofi --show drun",
         "tooltip": false
     },
@@ -227,7 +227,7 @@
     },
 
     "custom/weather": {
-        "exec": "~/.config/waybar/scripts/weather.sh Rome",
+        "exec": "~/.config/waybar/scripts/weather.sh Yakutsk",
         "return-type": "json",
         "interval": 1800,
         "tooltip": true,
