@@ -6,6 +6,6 @@
 
 - Hyprland, Hyprlock, Hyprlidle
 
-- eza
+- eza, bat, btop, zoxide, fd, lazygit, fzf, ripgrep, superfile
 
 - swwww
