@@ -1,6 +1,10 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     set -g fish_greeting ""
+
+    zoxide init fish | source
+    alias cd 'z'
+
     alias ls 'eza --icons'
     alias l 'ls -l'
     alias la 'ls -a'
@@ -13,5 +17,4 @@ if status is-interactive
     alias pls 'sudo dnf'
     alias v 'nvim'
     alias cat 'bat'
-    zoxide init fish | source
 end
