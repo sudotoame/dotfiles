@@ -1,0 +1,73 @@
+{
+	"go.goroot": "",
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"editor.smoothScrolling": true,
+	"editor.minimap.enabled": false,
+	"editor.detectIndentation": true,
+	"editor.cursorSmoothCaretAnimation": "on",
+	"workbench.editor.tabActionLocation": "left",
+	"workbench.sideBar.location": "right",
+	// Убрать полный путь к файлу сверху
+	"breadcrumbs.enabled": false,
+	// Установить дефолтный размер для редактора
+	"window.zoomLevel": 2,
+	// Настройка курсора
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.cursorBlinking": "solid",
+	// Отключаем панель управления окном
+	"chat.commandCenter.enabled": false,
+	"workbench.layoutControl.enabled": false,
+	"window.titleBarStyle": "native",
+	"window.menuBarVisibility": "toggle",
+	"editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+	"editor.fontSize": 16,
+	"files.autoSave": "onFocusChange",
+	"editor.formatOnSave": true,
+	"workbench.colorTheme": "Tokyo Night Bright",
+	"workbench.iconTheme": "ayu",
+	// Отключаем лишние декорации и метки
+	"explorer.decorations.badges": false,
+	"git.decorations.enabled": false,
+	"scm.diffDecorations": "none",
+	// Отключаем прилипание заголовка в деревьях
+	"workbench.tree.enableStickyScroll": false,
+	// Убирает вертикальные линии отступов в дереве файлов
+	"workbench.tree.renderIndentGuides": "none",
+	// Убрать значок для сворачивания кода
+	"editor.showFoldingControls": "never",
+	// Отключает вертикальные линии отступов в редакторе
+	"editor.guides.indentation": false,
+	// Не показывает пробелы, табы, перевод строки и т.п. символы в редакторе
+	"editor.renderWhitespace": "none",
+	// Отключает всплывающие предложения установить расширения
+	"extensions.ignoreRecommendations": true,
+	// Убираем виджет справа для скролла
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.vertical": "hidden",
+	// "editor.minimap.enabled": false,
+	"editor.matchBrackets": "never",
+	"editor.occurrencesHighlight": "off",
+	"editor.overviewRulerBorder": false,
+	"editor.hideCursorInOverviewRuler": true,
+	"editor.stickyScroll.enabled": false,
+	"workbench.colorCustomizations": {
+		"editorCursor.background": "#000000",
+		"editorOverviewRuler.wordHighlightStrongForeground": "#0000",
+		"editorOverviewRuler.selectionHighlightForeground": "#0000",
+		"editorOverviewRuler.rangeHighlightForeground": "#0000",
+		"editorOverviewRuler.wordHighlightForeground": "#0000",
+		"editorOverviewRuler.bracketMatchForeground": "#0000",
+		"editorOverviewRuler.findMatchForeground": "#0000",
+		"editorOverviewRuler.modifiedForeground": "#0000",
+		"editorOverviewRuler.deletedForeground": "#0000",
+		"editorOverviewRuler.warningForeground": "#0000",
+		"editorOverviewRuler.addedForeground": "#0000",
+		"editorOverviewRuler.errorForeground": "#0000",
+		"editorOverviewRuler.infoForeground": "#0000",
+		"editorOverviewRuler.border": "#0000",
+	},
+	// Убрать панель слева с git, run, debug, plugins
+	"workbench.activityBar.location": "hidden",
+	"window.commandCenter": false,
+}
