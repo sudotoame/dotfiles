@@ -6,7 +6,7 @@
 	"editor.minimap.enabled": false,
 	"editor.detectIndentation": true,
 	"editor.cursorSmoothCaretAnimation": "on",
-	"workbench.editor.tabActionLocation": "left",
+	"workbench.editor.tabActionLocation": "right",
 	"workbench.sideBar.location": "right",
 	// Убрать полный путь к файлу сверху
 	"breadcrumbs.enabled": false,
