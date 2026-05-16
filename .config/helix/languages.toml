@@ -1,0 +1,93 @@
+# ============================================================
+# Helix: настройка Go
+# Положить в: ~/.config/helix/languages.toml
+# ============================================================
+
+# --- gopls: единственный обязательный язык-сервер -----------
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config]
+# Форматирование gofumpt встроено в gopls — отдельный бинарь не нужен
+"formatting.gofumpt" = true
+
+# Управление импортами тоже встроено
+"formatting.local" = ""   # сюда можно вписать "github.com/your-org" чтобы свои импорты группировались отдельно
+
+# Автодополнение
+"ui.completion.usePlaceholders" = true
+"ui.semanticTokens" = true
+
+# Инлей-хинты — типы переменных, имена параметров и т.д. прямо в коде
+[language-server.gopls.config."ui.inlayhint.hints"]
+assignVariableTypes = true
+compositeLiteralFields = true
+compositeLiteralTypes = true
+constantValues = true
+functionTypeParameters = true
+parameterNames = false 
+rangeVariableTypes = true
+
+# Диагностика: включаем staticcheck и полезные анализаторы
+"ui.diagnostic.staticcheck" = true
+
+[language-server.gopls.config."ui.diagnostic.analyses"]
+unusedparams = true       # неиспользуемые параметры функций
+unusedwrite = true        # запись в переменную без чтения
+unreachable = true        # недостижимый код
+nilness = true            # nil-разыменования
+shadow = true             # затенение переменных
+useany = true             # interface{} → any
+fieldalignment = false    # шумный, включай если правда оптимизируешь память
+
+# Codelens-команды (run test, generate, tidy и т.д.)
+[language-server.gopls.config."ui.codelenses"]
+generate = true
+test = true
+tidy = true
+upgrade_dependency = true
+vendor = true
+run_govulncheck = true
+
+# ============================================================
+# Сам язык
+# ============================================================
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports", args = ["-local", "github.com/your-org"] }
+language-servers = ["gopls"]
+
+[[language]]
+name = "gomod"
+auto-format = true
+language-servers = ["gopls"]
+
+[[language]]
+name = "gowork"
+auto-format = true
+language-servers = ["gopls"]
+
+[[language]]
+name = "gotmpl"
+language-servers = ["gopls"]
+
+
+# ============================================================
+# ОПЦИОНАЛЬНО: golangci-lint как второй LSP
+# Раскомментируй блоки ниже, если хочешь расширенный набор линтеров.
+# Перед этим установи:
+#   brew install golangci-lint
+#   go install github.com/nametake/golangci-lint-langserver@latest
+# И положи .golangci.yml в корень проекта.
+# ============================================================
+
+# [language-server.golangci-lint-lsp]
+# command = "golangci-lint-langserver"
+#
+# [language-server.golangci-lint-lsp.config]
+# command = ["golangci-lint", "run", "--output.json.path=stdout", "--show-stats=false", "--issues-exit-code=1"]
+#
+# Затем поменяй массив language-servers у [[language]] name = "go" на:
+# language-servers = ["gopls", "golangci-lint-lsp"]

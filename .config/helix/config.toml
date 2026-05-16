@@ -1,0 +1,58 @@
+theme = "catppuccin_mocha"   # на вкус — список: hx --health, потом :theme <Tab>
+ 
+[editor]
+line-number = "relative"     # удобно для прыжков типа 12j, 5k
+mouse = false
+bufferline = "multiple"      # вкладки сверху, когда открыто >1 файла
+color-modes = true           # цвет статусбара меняется в зависимости от режима
+cursorline = true
+auto-save = false            # включи true, если хочешь сохранять при потере фокуса
+completion-trigger-len = 1   # автодополнение с первого символа
+true-color = true
+rulers = [100]               # вертикальная линия на 100 символе
+ 
+[editor.statusline]
+left   = ["mode", "spinner", "file-name", "file-modification-indicator", "read-only-indicator"]
+center = ["diagnostics"]
+right  = ["version-control", "position", "file-encoding", "file-type"]
+ 
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true        # покажет хинты от gopls (типы, имена параметров)
+auto-signature-help = true
+display-signature-help-docs = true
+snippets = true
+ 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+ 
+[editor.indent-guides]
+render = true
+character = "▏"
+ 
+[editor.file-picker]
+hidden = false               # показывать скрытые файлы в пикере (space + f)
+ 
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+ 
+[editor.whitespace.characters]
+tab = "→"
+tabpad = "·"
+ 
+# ============================================================
+# Полезные шорткаты (опционально)
+# ============================================================
+ 
+[keys.normal]
+# Сохранить файл по Ctrl-s
+"C-s" = ":w"
+# Быстро открыть конфиг
+"space"."c" = ":config-open"
+tab = "goto_next_buffer"
+S-tab = "goto_previous_buffer"
+"C-y" = [":new", ":insert-output yazi \"$(pwd)\"", ":buffer-close!", ":redraw", ":sh sleep 0.05"]
