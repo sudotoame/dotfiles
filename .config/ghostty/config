@@ -3,5 +3,5 @@ font-size = 15
 
 theme = Dracula+
 
-background-opacity = 1
+background-opacity = 0.9
 background-blur-radius = 20
