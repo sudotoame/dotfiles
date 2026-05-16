@@ -1,4 +1,7 @@
 {
+	"markdown.copyFiles.destination": {
+		"*.md": "./images/",
+	},
 	"go.goroot": "",
 	"editor.tabSize": 2,
 	"editor.insertSpaces": false,
@@ -70,4 +73,6 @@
 	// Убрать панель слева с git, run, debug, plugins
 	"workbench.activityBar.location": "hidden",
 	"window.commandCenter": false,
+	"claudeCode.preferredLocation": "panel",
+	"workbench.editor.empty.hint": "hidden",
 }
